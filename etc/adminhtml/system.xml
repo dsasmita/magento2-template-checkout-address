@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customer" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>customer</tab>
+            <resource>Magento_Customer::config_customer</resource>
+            <group id="address_templates_checkout" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Checkout Address Templates</label>
+                <field id="html" type="textarea" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Address format</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

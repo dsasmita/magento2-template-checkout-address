@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Core/etc/config.xsd">
+    <default>
+        <customer>
+            <address_templates_checkout>
+                <html>
+                	<![CDATA[{{depend_prefix}} {{prefix}} {{/depend_prefix}}
+					{{depend_firstname}} {{firstname}} {{/depend_firstname}} 
+					{{depend_middlename}} {{middlename}} {{/depend_middlename}}
+					{{depend_lastname}} {{lastname}} {{/depend_lastname}}
+					{{depend_suffix}} {{suffix}} {{/depend_suffix}}
+					<br />
+					{{depend_company}} {{company}}<br /> {{/depend_company}}
+					{{depend_street}} {{street}}<br /> {{/depend_street}}
+					{{depend_city}} {{city}}, {{/depend_city}}
+					{{depend_region}} {{region}}, {{/depend_region}}
+					{{depend_postcode}} {{postcode}} {{/depend_postcode}}
+					<br />
+					{{depend_country}} {{country}}<br /> {{/depend_country}}
+					{{depend_telephone}} T: <a href="tel:{{telephone}}">{{telephone}}</a><br> {{/depend_telephone}}
+					{{depend_fax}} F: {{fax}}<br> {{/depend_fax}}
+					{{depend_vat_id}} VAT: {{vat_id}} {{/depend_vat_id}}]]>
+				</html>
+            </address_templates_checkout>
+        </customer>
+    </default>
+</config>
