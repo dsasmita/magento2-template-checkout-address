@@ -1,0 +1,41 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="billing-address-details" data-bind="if: isAddressDetailsVisible() && currentBillingAddress()">
+    <div data-bind="
+        html: formatAddress(
+                    currentBillingAddress().prefix,
+                    currentBillingAddress().firstname,
+                    currentBillingAddress().middlename,
+                    currentBillingAddress().lastname,
+                    currentBillingAddress().suffix,
+                    currentBillingAddress().company,
+                    currentBillingAddress().street,
+                    currentBillingAddress().city,
+                    currentBillingAddress().region,
+                    currentBillingAddress().postcode,
+                    currentBillingAddress().countryId,
+                    currentBillingAddress().telephone,
+                    currentBillingAddress().fax,
+                    currentBillingAddress().vat_id
+        )"></div>
+    <br/><br/>
+    <!-- ko foreach: { data: currentBillingAddress().customAttributes, as: 'element' } -->
+        <!-- ko foreach: { data: Object.keys(element), as: 'attribute' } -->
+            <!-- ko if: (typeof element[attribute] === "object") -->
+                <!-- ko text: element[attribute].value --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: (typeof element[attribute] === "string") -->
+                <!-- ko text: element[attribute] --><!-- /ko -->
+            <!-- /ko --><br/>
+        <!-- /ko -->
+    <!-- /ko -->
+    <button type="button"
+            class="action action-edit-address"
+            data-bind="visible: !isAddressSameAsShipping(), click: editAddress">
+        <span data-bind="i18n: 'Edit'"></span>
+    </button>
+</div>
