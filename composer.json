@@ -1,0 +1,21 @@
+{
+  "name": "dangs/template-checkout-address",
+  "description": "Template checkout address",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "dangs",
+      "email": "dangs.work@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Dangs\\TemplateCheckoutAddress\\": ""
+    },
+    "files": [
+      "registration.php"
+    ]
+  }
+}
