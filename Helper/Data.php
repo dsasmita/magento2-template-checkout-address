@@ -1,6 +1,6 @@
 <?php
 
-namespace Lingble\CheckoutAddressTemplate\Helper;
+namespace Dangs\TemplateCheckoutAddress\Helper;
 
 /**
  * Helper Data.
